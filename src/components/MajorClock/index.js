@@ -11,7 +11,10 @@ const formatTime = (data) => {
     const minutes = ((time - seconds) / 60) % 60;
     const hours = (((time - seconds) / 60) - minutes) / 60;
 
-    return `${padStart(hours, 2, '0')}:${padStart(minutes, 2, '0')}:${padStart(seconds, 2, '0')}:${padStart(ms, 3, '0')}`;
+    return `${padStart(hours, 2, '0')}:
+        ${padStart(minutes, 2, '0')}:
+        ${padStart(seconds, 2, '0')}:
+        ${padStart(ms, 3, '0')}`;
 }
 
 const MajorClock = ({ number = 'header', milliseconds = 0, activated = false }) => {
